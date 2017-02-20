@@ -1,6 +1,7 @@
 # Install
-1. install geth
-2. install truffle
+1. install geth <br>
+    https://github.com/ethereum/go-ethereum
+2. install truffle <br>
     npm install truffle -g
 
 ## Run project
