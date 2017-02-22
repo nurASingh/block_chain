@@ -4,20 +4,23 @@ contract HelloWorld {
   uint public balance;
   uint public testvar;
   
-  event sent(uint amt);
+  event Sent(uint amt);
 
 
   function HelloWorld(){
     balance = 100;
   }
-  function deposit(uint amt) returns (uint){
+  function deposit(uint amt) {
     testvar = amt;
-    sent(amt);
-    return testvar;
+    Sent(amt);
   }
 
   function getBalance() returns (uint){
-    sent(2000);
+    Sent(2000);
     return testvar;
+  }
+
+  function transfer(){
+    
   }
 }

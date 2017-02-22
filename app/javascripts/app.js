@@ -48,7 +48,10 @@ window.App = {
       }
 
     HelloWorld.deployed().then(function(instance){
-        instance.sent().watch(function(err,data){ console.log(err + data)})
+        instance.sent().watch(function(err,data)
+        { 
+          console.log(err + data)
+        });
     })
 
       self.refreshBalance();
