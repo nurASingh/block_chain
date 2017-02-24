@@ -49,7 +49,7 @@ window.App = {
       }
 
     HelloWorld.deployed().then(function(instance){
-        instance.sent().watch(function(err,data)
+        instance.Sent().watch(function(err,data)
         { 
           console.log(err + data)
         });
@@ -138,7 +138,7 @@ window.App = {
   var meta;
     HelloWorld.deployed().then(function(instance) {
       meta = instance;
-      return meta.deposit.call(1000, {from: account});
+      return meta.deposit(1000, {from: account});
     }).then(function(val) {
       console.log('Promise' + meta);
       self.refreshBalance();
@@ -152,7 +152,7 @@ window.App = {
   var meta;
     Sample.deployed().then(function(instance) {
       meta = instance;
-      return meta.set.call(1000, {from: account});
+      return meta.set(1000, {from: account});
     }).then(function(val) {
       console.log('Promise' + meta);
       self.refreshBalance();

@@ -11,7 +11,7 @@ contract HelloWorld {
     balance = 100;
   }
   function deposit(uint amt) {
-    testvar = amt;
+    testvar += amt;
     Sent(amt);
   }
 
