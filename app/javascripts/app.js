@@ -140,7 +140,7 @@ window.App = {
       meta = instance;
       return meta.deposit(1000, {from: account});
     }).then(function(val) {
-      console.log('Promise' + meta);
+      console.log('Promise' + val);
       self.refreshBalance();
     }).catch(function(e) {
       console.log(e);
@@ -154,7 +154,7 @@ window.App = {
       meta = instance;
       return meta.set(1000, {from: account});
     }).then(function(val) {
-      console.log('Promise' + meta);
+      console.log('Promise' + val);
       self.refreshBalance();
     }).catch(function(e) {
       console.log(e);
