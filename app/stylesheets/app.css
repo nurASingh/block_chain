@@ -1,6 +1,4 @@
 body {
-  margin-left: 25%;
-  margin-right: 25%;
   margin-top: 10%;
   font-family: "Open Sans", sans-serif;
 }
@@ -24,8 +22,9 @@ button {
 h1, h2 {
   display: inline-block;
   vertical-align: middle;
-  margin-top: 0px;
+  margin-top: -40px;
   margin-bottom: 10px;
+      margin-left: 40%;
 }
 
 h2 {
@@ -50,3 +49,42 @@ h3 {
 .hint {
   color: #666;
 }
+
+#log {
+  position: relative;
+  width : 40%;
+ 
+  height: 800px;
+  float: left;
+  background: rgba(234, 184, 160, 0.21);
+}
+
+#action{
+  height: 800px;
+  position: relative;
+  width: 60%; 
+  
+  float: left;
+  background: rgba(137, 142, 142, 0.28);
+}
+
+#action .controls input[type='number']{
+  width:40%;
+}
+
+#action .controls{
+      position: relative;
+    left: 35%;
+}
+
+#action .my-panel{
+      margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#action .my-panel span{
+  margin: 5%;
+}
+
+

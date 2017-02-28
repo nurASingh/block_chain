@@ -9,10 +9,12 @@ import { default as contract } from 'truffle-contract'
 import metacoin_artifacts from '../../build/contracts/MetaCoin.json'
 import hello_artifacts from '../../build/contracts/HelloWorld.json'
 import sample_artifacts from '../../build/contracts/SimpleStorage.json' 
+import CDS_artifacts from '../../build/contracts/CDS.json' 
 // MetaCoin is our usable abstraction, which we'll use through the code below.
 var MetaCoin = contract(metacoin_artifacts);
 var HelloWorld = contract(hello_artifacts);
 var Sample = contract(sample_artifacts);
+var CDS = contract(CDS_artifacts);
 
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
@@ -29,6 +31,7 @@ window.App = {
     MetaCoin.setProvider(web3.currentProvider);
     HelloWorld.setProvider(web3.currentProvider);
     Sample.setProvider(web3.currentProvider);
+    CDS.setProvider(web3.currentProvider);
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
@@ -186,6 +189,11 @@ window.App = {
     }).catch(function(e) {
       console.log(e);
     });
+  },
+
+
+  pay: function(){
+    console.log("pay to account");
   }
 };
 
