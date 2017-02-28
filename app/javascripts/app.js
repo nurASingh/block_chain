@@ -42,6 +42,7 @@ window.App = {
       }
 
       accounts = accs;
+      console.log(accs);
       account = accounts[0];
       console.log(accounts[0]);
       if(accounts[1]){
@@ -62,6 +63,32 @@ window.App = {
   setStatus: function(message) {
     var status = document.getElementById("status");
     status.innerHTML = message;
+  },
+
+  getAllBalance : function(i){
+     var self = this;
+
+    var meta;
+    
+    
+      MetaCoin.deployed().then(function(instance) {
+        meta = instance;
+        return meta.getBalance.call(accounts[i], {from: account});
+      }).then(function(value) {
+        var balance_element = document.getElementById("log");
+        balance_element.innerHTML += (accounts[i] + " = " +value.valueOf()  + "<br>");
+        console.log( balance_element.innerHTML);
+        if(i < accounts.length-1){
+            self.getAllBalance(i+1);
+        }else{
+          return;
+        }
+        
+      }).catch(function(e) {
+        console.log(e);
+        self.setStatus("Error getting balance; see log.");
+      });
+    
   },
 
   refreshBalance: function() {
@@ -108,7 +135,7 @@ window.App = {
       var balance_element = document.getElementById("sample");
       balance_element.innerHTML = value.valueOf();
     });
-
+    this.getAllBalance(0);
   },
 
   sendCoin: function() {
@@ -152,7 +179,7 @@ window.App = {
   var meta;
     Sample.deployed().then(function(instance) {
       meta = instance;
-      return meta.set(1000, {from: account});
+      return meta.set(5000, {from: account});
     }).then(function(val) {
       console.log('Promise' + val);
       self.refreshBalance();

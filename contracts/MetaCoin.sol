@@ -11,16 +11,31 @@ contract MetaCoin {
 	mapping (address => uint) balances;
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
+	event Log(string text);
 
 	function MetaCoin() {
 		balances[tx.origin] = 10000;
 	}
 
 	function sendCoin(address receiver, uint amount) returns(bool sufficient) {
-		if (balances[msg.sender] < amount) return false;
+		if (balances[msg.sender] < amount){
+			Log("Balance insufficient OR invalid receiver");
+			return false;
+		} 
 		balances[msg.sender] -= amount;
 		balances[receiver] += amount;
 		Transfer(msg.sender, receiver, amount);
+		return true;
+	}
+
+	function sentBWAccount(address receiver,address sender, uint amount) returns(bool sufficient) {
+		if (balances[sender] < amount){
+			Log("Balance insufficient OR invalid receiver");
+			return false;
+		} 
+		balances[sender] -= amount;
+		balances[receiver] += amount;
+		Transfer(sender, receiver, amount);
 		return true;
 	}
 
