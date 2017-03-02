@@ -32,12 +32,6 @@ window.App = {
     HelloWorld.setProvider(web3.currentProvider);
     Sample.setProvider(web3.currentProvider);
     CDS.setProvider(web3.currentProvider);
-
-
-   CDS.deployed().then(function(i){
-     console.log(i.Log);
-    });
-
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
@@ -58,31 +52,14 @@ window.App = {
         account_2 = accounts[1];
       }
 
-    // HelloWorld.deployed().then(function(instance){
-    //     instance.Sent().watch(function(err,data)
-    //     { 
-    //       console.log(err + data)
-    //     });
-    // })
+    HelloWorld.deployed().then(function(instance){
+        instance.Sent().watch(function(err,data)
+        { 
+          console.log(err + data)
+        });
+    })
 
-     // self.refreshBalance();
-
-
-     //var self = this;
-  // var meta;
-  //   CDS.deployed().then(function(instance) {
-  //     meta = instance;
-  //     return meta.mint(1000, {from: account});
-  //   }).then(function(val) {
-  //     console.log('Promise' + val);
-  //     self.getAllBalance(0);
-  //   }).catch(function(e) {
-  //     console.log(e);
-  //   });
-
-//this.getAllBalance(0);
-    document.getElementById("log").innerHTML= "";
-    self.getAllBalance(0);
+      self.refreshBalance();
     });
   },
 
@@ -97,12 +74,13 @@ window.App = {
     var meta;
     
     
-      CDS.deployed().then(function(instance) {
+      MetaCoin.deployed().then(function(instance) {
         meta = instance;
         return meta.getBalance.call(accounts[i], {from: account});
       }).then(function(value) {
         var balance_element = document.getElementById("log");
         balance_element.innerHTML += (accounts[i] + " = " +value.valueOf()  + "<br>");
+        console.log( balance_element.innerHTML);
         if(i < accounts.length-1){
             self.getAllBalance(i+1);
         }else{
@@ -111,7 +89,7 @@ window.App = {
         
       }).catch(function(e) {
         console.log(e);
-        //self.setStatus("Error getting balance; see log.");
+        self.setStatus("Error getting balance; see log.");
       });
     
   },
@@ -129,7 +107,7 @@ window.App = {
       balance_element.innerHTML = value.valueOf();
     }).catch(function(e) {
       console.log(e);
-     // self.setStatus("Error getting balance; see log.");
+      self.setStatus("Error getting balance; see log.");
     });
 
     MetaCoin.deployed().then(function(instance) {
@@ -141,7 +119,7 @@ window.App = {
       balance_element.innerHTML = value.valueOf();
     }).catch(function(e) {
       console.log(e);
-     // self.setStatus("Error getting balance; see log.");
+      self.setStatus("Error getting balance; see log.");
     });
 
     HelloWorld.deployed().then(function(instance){
@@ -160,7 +138,6 @@ window.App = {
       var balance_element = document.getElementById("sample");
       balance_element.innerHTML = value.valueOf();
     });
-    document.getElementById("log").innerHTML= "";
     this.getAllBalance(0);
   },
 
@@ -177,11 +154,11 @@ window.App = {
       meta = instance;
       return meta.sendCoin(receiver, amount, {from: account});
     }).then(function() {
-      //self.setStatus("Transaction complete!");
+      self.setStatus("Transaction complete!");
       self.refreshBalance();
     }).catch(function(e) {
       console.log(e);
-     // self.setStatus("Error sending coin; see log.");
+      self.setStatus("Error sending coin; see log.");
     });
   },
 
@@ -216,30 +193,8 @@ window.App = {
 
 
   pay: function(){
-    var self = this;
-    var meta ;
-    CDS.deployed().then(function(instance){
-      meta = instance;
-      var amt = document.getElementById('amount').value;
-      var rec = document.getElementById('receiver').value;
-
-      if(amount < 0 || !rec){
-        alert('please correct the value');
-      }
-      self.setStatus('Please wait.... In process');
-      return meta.transfer(rec, parseInt(amt), {from : account});
-    }).then(function(val){
-      console.log(val);
-       self.setStatus('Completed');
-       document.getElementById("log").innerHTML= "";
-       self.getAllBalance(0);
-    }).catch(function(e){
-      self.setStatus('Error : ' + e);
-    });
-  },
-
-
-
+    console.log("pay to account");
+  }
 };
 
 

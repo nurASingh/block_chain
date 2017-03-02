@@ -24,8 +24,10 @@
             </div>
           </div>
         <div class="controls">
-            <input type = "number" />
-            <button class="btn btn-primary"  onclick="pay()">Pay on Maturity</button>
+            <input type = "text" id= "receiver" placeholder="0xe5d354b7c91f4b901103458e1e6ecfee709e1dfd "/>
+            <input id = "amount" type = "number" placeholder="100"/>
+            <button class="btn btn-primary"  onclick="App.pay()">Pay</button><br/>
+            <span id= "status"></span>
         </div>
       </div>
       <div id= "log">

@@ -72,9 +72,13 @@ h3 {
   width:40%;
 }
 
+#action .controls input[type='text']{
+  width:40%;
+}
+
 #action .controls{
       position: relative;
-    left: 35%;
+    left: 5%;
 }
 
 #action .my-panel{
