@@ -12,6 +12,7 @@ contract CDS {
     }
 
     function mint(uint amount) returns (bool status){
+        Log("Minting");
         if(msg.sender == minter){
             balances[tx.origin] += amount;
             return true;
@@ -25,7 +26,9 @@ contract CDS {
             //trigger CDS
             triggerCDS(receiver,amount);
 			return false;
-		} 
+		}
+
+        Log("Paying from account"); 
 		balances[msg.sender] -= amount;
 		balances[receiver] += amount;
 		
@@ -33,7 +36,8 @@ contract CDS {
     }
 
     function getBalance(address addr) returns(uint) {
-		return balances[addr];
+		Log("Get balance");
+        return balances[addr];
 	}
 
     function triggerCDS(address receiver , uint amount){

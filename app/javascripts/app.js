@@ -34,9 +34,14 @@ window.App = {
     CDS.setProvider(web3.currentProvider);
 
 
-   CDS.deployed().then(function(i){
-     console.log(i.Log);
-    });
+CDS.deployed().then(function(myContractInstance){
+var event = myContractInstance.Log([{valueA: 23}], function(error, result){
+    if (!error)
+      console.log(result);
+  });
+});
+
+   
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
