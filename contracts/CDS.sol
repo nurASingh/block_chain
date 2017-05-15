@@ -2,6 +2,7 @@ pragma solidity ^0.4.2;
 
 contract CDS {
 
+    // tetsing
     mapping (address => uint) balances;
     event Log(string text);
      address minter ;

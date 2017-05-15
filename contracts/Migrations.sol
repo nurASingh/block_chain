@@ -14,6 +14,7 @@ contract Migrations {
 
   function setCompleted(uint completed) restricted {
     last_completed_migration = completed;
+    
   }
 
   function upgrade(address new_address) restricted {
