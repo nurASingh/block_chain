@@ -39,6 +39,7 @@ contract CDS {
     function getBalance(address addr) returns(uint) {
 		Log("Get balance");
         return balances[addr];
+        //test
 	}
 
     function triggerCDS(address receiver , uint amount){

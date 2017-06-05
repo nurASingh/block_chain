@@ -82,7 +82,7 @@ var event = myContractInstance.Log([{valueA: 23}], function(error, result){
   //     return meta.mint(1000, {from: account});
   //   }).then(function(val) {
   //     console.log('Promise' + val);
-  //     self.getAllBalance(0);
+  //     //self.getAllBalance(0);
   //   }).catch(function(e) {
   //     console.log(e);
   //   });
@@ -260,7 +260,7 @@ window.addEventListener('load', function() {
   } else {
     console.warn("No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you deploy live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    window.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+    window.web3 = new Web3(new Web3.providers.HttpProvider("http://10.129.15.221:8545"));
   }
 
   App.start();

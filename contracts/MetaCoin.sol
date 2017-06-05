@@ -16,15 +16,6 @@ contract MetaCoin {
 
 	function MetaCoin() {
 		balances[tx.origin] = 10000;
-		names[0x707e622b6a3acab24693251c78259a4275e29eb8] = "Arun";
-		names[0xe5d354b7c91f4b901103458e1e6ecfee709e1dfd] = "Rahul";
-		names[0x03c13b67c00085ea22b01b76dd7251de8d9232f9] = "Sanket";
-		names[0xc520446a1a1d3b9fbeb1c83ef0c49a3460148d10] = "mahesh";
-		names[0xcb5f4749befd462f3b4ac9acde573c994e539025] = "Aditya";
-		names[0x1110e4c190e46cdca44a08527caa269e5711170a] = "UserX";
-		names[0x629b95c3ac9a5d2493ddbb5ad2c5e82221dfaab6] = "UserX1";
-		names[0x1a5f57a5d9b5b35f6f0bfe1bf176a159237930ee] = "UserX2";
-		names[0xc73e48b2693acda2ab5e981c03f5ecba2bf0b22d] = "UserX3";
 	}
 
 	function sendCoin(address receiver, uint amount) returns(bool sufficient) {
