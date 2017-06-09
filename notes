@@ -1,0 +1,53 @@
+geth -datadir "D:\Private_Block_Chain\1" init "D:\Private_Block_Chain\CustomGensis.json" && geth -rpc -rpcport "8545" -rpccorsdomain "*" -datadir "D:\Private_Block_Chain\1" -port "30303"  -rpcapi "db,eth,net,web3" -networkid 1010101010 -rpcaddr "10.129.15.221" console
+
+
+
+geth -datadir "D:\Private_Block_Chain\1" init "D:\Private_Block_Chain\CustomGensis.json" && geth -rpc -rpcport "8545" -rpccorsdomain "*" -datadir "D:\Private_Block_Chain\1" -port "30303"  -rpcapi "db,eth,net,web3" -networkid 1010101010 -rpcaddr "10.23.138.132" console 
+10.23.138.132
+
+geth -datadir "D:\Private_Block_Chain\2" init "D:\Private_Block_Chain\CustomGensis.json" && geth -datadir "D:\Private_Block_Chain\2"  -networkid 1010101010 -ipcdisable -port 30302 console
+
+geth -datadir "D:\Private_Block_Chain\3" init "D:\Private_Block_Chain\CustomGensis.json" && geth -datadir "D:\Private_Block_Chain\3"  -networkid 1010101010 -ipcdisable -port 30301 console
+
+ personal.unlockAccount(eth.coinbase, "123456", 30000)
+ 
+ 
+ AWS
+ 
+ geth -datadir "/home/ubuntu/block_chain/node_1" init "/home/ubuntu/block_chain/CustomGensis.json" && geth -rpc -rpcport "8545" -rpccorsdomain "*" -datadir "/home/ubuntu/block_chain/node_1" -port "30303"  -rpcapi "db,eth,net,web3" -networkid 1010101010 -rpcaddr "10.35.236.140" console
+ 
+  geth -datadir "/home/ubuntu/block_chain/node_1" init "/home/ubuntu/block_chain/CustomGensis.json" && geth -rpc -rpcport "8545" -rpccorsdomain "*" -datadir "/home/ubuntu/block_chain/node_1" -port "30303"  -rpcapi "db,eth,net,web3" -networkid 1010101010 -rpcaddr "10.35.236.210" console
+ 
+ 
+ Fatal: Failed to write genesis block: database already contains an incompatible genesis block (have df7228dbad7190ef, new 6f9aef6608fff662)
+ 
+ personal.unlockAccount(eth.coinbase, "123", 30000)
+ 
+ admin.addPeer()
+ 
+
+ 0f84435246e7e68f57916759c91ec10418da76e385d7bc734330a908a5d4b7ce88d1d31832e0e573c3a1b645da10fcc93bad967a2e173fc471ff68bcfd74f12a
+ 
+ 
+ admin.addPeer("enode://0142c2c22ff518157dd1b1b40e45152c93ed5ee5cb6e8e1816528fb99d3f93ecaf389678b0ba23dce43eff5b4d05aa40cd90ba79f66317f6c701bb488e6358a1@10.35.236.140:30303")
+ 
+ 
+  /home/ubuntu/.ethash/
+  
+  
+  admin.addPeer("enode://0f84435246e7e68f57916759c91ec10418da76e385d7bc734330a908a5d4b7ce88d1d31832e0e573c3a1b645da10fcc93bad967a2e173fc471ff68bcfd74f12a@10.129.15.221:30303")
+  
+  admin.addPeer("enode://723c47c6d1c252f116cc194c80278bbf29cc68eb5e34e3f8ba4c5bb0ede91e06b252f127b8352e9f5b9b34fc4a9ecf1ac3f0411fd0dea4daabb979a3674b0467@10.129.15.221:30302")
+  
+  admin.addPeer("enode://49e4aba39aa5d6bfaa3cb2134e28fd1419eefa85ea7b7c1c6bdd2085368c8f5978f7117d22e1830615fad13cffd014226f422211fda007eb5e22c0cbdc662b19@10.129.15.221:30301")
+  
+  admin.addPeer("enode://53633f15d1e8fa35d67540abb25572fad5867b7e1942fc2a309f74aa6a726babadf7ca0613f42eb04dbaa1b734dc05b932dcbbe1e45b51ac721700c019a2a7ab@10.35.236.140:30303")
+   admin.addPeer("enode://80da8b5153be338a2f4a4b38a8b99f0903d9eea83491ae2dc79fc16887fdc35903c15d7ce37c8ba2cd83a1569cfd0f75eedfaada51ae30b78eb934b91e9e4de8@10.23.138.132:30303")
+   
+   
+   admin.addPeer("enode://0f84435246e7e68f57916759c91ec10418da76e385d7bc734330a908a5d4b7ce88d1d31832e0e573c3a1b645da10fcc93bad967a2e173fc471ff68bcfd74f12a@10.35.236.210:30303")
+   
+   
+   
+   http-server '/home/ubuntu/block_chain/build/' -p 9000  && http-server '/home/ubuntu/block_chain/App2/' -p 9001
+   
