@@ -1,0 +1,176 @@
+geth --datadir "/home/arun/block_chain/data_2"   init "/home/arun/block_chain/data/genesis.json" 
+
+
+499173167496 
+
+Finance for Everyone Specialization
+
+
+
+
+
+geth init "/home/arun/block_chain/data/genesis.json"  && geth --testnet --datadir "/home/arun/block_chain/data_2" console 
+personal.newAccount("123456")
+web3.miner.setEtherbase(web3.eth.accounts[0])
+
+mist.exe --rpc http://localhost:8545
+geth  --datadir "/home/arun/block_chain/data_2" init "/home/arun/block_chain/genesis.json" 
+
+install nodejs 5.0>
+install npm 3>
+inatll python 2.6 > 3.0<
+install dot net framewokr
+install sdk
+inatll 
+
+
+$ choco install nodejs.install –y
+$ choco install git –y
+$ choco install VisualStudioCode -y
+
+
+
+$ npm install -g npm
+$ npm install -g –production windows-build-tools
+$ npm install -g ethereumjs-testrpc
+$ npm install -g truffle
+
+npm install --global windows-build-tools
+
+use girbash not cmd
+
+ web3.personal.unlockAccount(web3.personal.listAccounts[0], "password", 123456)
+ 
+ 
+ personal.unlockAccount(eth.coinbase, "123456789", 300)
+ 
+ geth init CustomGenesis.json
+ 
+ 
+ admin.stopWS("127.0.0.1", 8546, "*", "web3,net,eth")
+ 
+ 
+ eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(1, "ether")})
+ 
+ 
+ geth -datadir "D:\Private" -ipcdisable -port 30302 -bootnodes enode://91e44c7bbfcc8169b34ffcc7ed2ef7c48445ba9db26d16ffe38619528fdeb01d57c3a3fd1eed8fb5b40fa54039d24cb627756e1dfe81101af0535a84fd453d20@165.225.106.70:30303
+ 
+ 
+ 
+ geth -datadir "D:\Private" -ipcdisable -port 30302 console
+ 
+ 
+ admin.addPeer("enode://44ce69e7e95c94ec249cd6a65f43d5f01d4b1dc308dd17bb4f6065702281c9c30c4cb47df7b093c1f17e333fa2d8612fc68b613231d2d8d77d58b76f329ea376@10.129.15.221:30303")
+ enode://44ce69e7e95c94ec249cd6a65f43d5f01d4b1dc308dd17bb4f6065702281c9c30c4cb47df7b093c1f17e333fa2d8612fc68b613231d2d8d77d58b76f329ea376@0.0.0.0
+
+
+ 
+ enode://91e44c7bbfcc8169b34ffcc7ed2ef7c48445ba9db26d16ffe38619528fdeb01d57c3a3fd1eed8fb5b40fa54039d24cb627756e1dfe81101af0535a84fd453d20@0.0.0.0
+ 
+ geth  -datadir "D:\Ethereum" -testnet -rpc -rpcport 8545 --rpccorsdomain "*"  -rpcaddr "127.0.0.1"  console
+ 
+ geth  -datadir "D:\Ethereum" -testnet -rpc -rpcport 8545 --rpccorsdomain "*"  -rpcaddr "10.129.15.221"  console
+ 
+ geth  -datadir "D:\Ethereum" -testnet -rpc -rpcport 8545 --rpccorsdomain "*"  -rpcaddr "10.23.138.132"  console
+ 
+ personal.unlockAccount(eth.coinbase, "123456", 30000)
+ admin.startRPC("127.0.0.1", 8545, "*", "web3,net,eth")
+personal.unlockAccount(eth.coinbase, "123456", 30000)
+miner.start(2)
+personal.unlockAccount(eth.coinbase, "123456789", 3000)
+ personal.unlockAccount(eth.coinbase, "123456789", 3000)
+ web3.eth.accounts[0]
+ "alloc":
+{
+        "0x707E622b6a3aCAb24693251C78259a4275E29Eb8":
+        { "balance": "2000000" }
+}
+
+
+0x19F749de49e1491Ef2Fc41E4531Db93d744C3573
+
+primary = eth.accounts[0]
+balance = web3.fromWei(eth.getBalance(primary), "ether");
+
+
+personal.unlockAccount(eth.coinbase, "123456789", 300)
+miner.start(1)
+personal.unlockAccount(eth.coinbase, "123456789", 300)
+
+always use  the data-dir with locak drive
+
+
+
+0x67275a5eefcdf7ee28cee8812171323060d4658b
+
+
+
+$ truffle init webpack
+Downloading project...
+Installing dependencies...
+Project initialized.
+
+  Documentation: https://github.com/trufflesuite/truffle-init-webpack
+
+Commands:
+
+  Compile:        truffle compile
+  Migrate:        truffle migrate
+  Test:           truffle test
+  Build Frontend: npm run build
+  Run Linter:     npm run lint
+  Run Dev Server: npm run dev
+
+Hint: Run the dev server via `npm run dev` to have your changes rebuilt automatically.
+
+Make sure you have an Ethereum client like the ethereumjs-testrpc running on http://localhost:8545.
+0xE5d354b7C91F4B901103458E1E6ECFEe709E1dfd
+
+geth attach http://52.172.36.216:8545
+
+
+migration.sol mandatoryt
+1-Initail migration mandatory
+
+
+HelloWorld.deployed()
+
+var hello1  = HelloWorld.deployed();
+hello2.deposite.call().then(console.log)
+
+
+personal.newAccount("123456")
+
+
+truffle compile && truffle migrate && npm run build && npm run dev
+
+personal.unlockAccount(eth.coinbase, "123456", 30000)
+var sender = eth.accounts[0];
+var receiver = eth.accounts[1];
+eth.sendTransaction({from:sender, to:receiver, value: 1606938044258990275541962092341162602522000})
+
+
+
+
+
+// 6- march
+
+geth -identity "MyNodeName" -datadir "D:\Ethereum2"  init "D:\genesis.json" 
+geth -datadir "D:\Block_chain\Main_Node\2" init "D:\genesis.json" & geth -rpc -rpcport "8545" -rpccorsdomain "*" -datadir "D:\Block_chain\Main_Node\2" -port "30303"  -rpcapi "db,eth,net,web3" -networkid 1999 -rpcaddr "10.129.15.221" console
+geth -datadir "D:\Block_chain\Sec_Node\5" init "D:\genesis.json" & geth -datadir "D:\Block_chain\Sec_Node\5"  -networkid 1999 -ipcdisable -port 30302 console
+geth -datadir "D:\Block_chain\Sec_Node\4" init "D:\genesis.json" & geth -datadir "D:\Block_chain\Sec_Node\4"  -networkid 1999 -ipcdisable -port 30301 console
+
+admin.addPeer("enode://0f84435246e7e68f57916759c91ec10418da76e385d7bc734330a908a5d4b7ce88d1d31832e0e573c3a1b645da10fcc93bad967a2e173fc471ff68bcfd74f12a@10.129.15.221:30303")
+admin.addPeer("enode://2d881ef853fefc1eca10607b3154cdd22ec3df5db752e45106b8fd4b6d6d85e6877c50dc421991113ed9698dbe56d4e2193ceb7c5db4cd6f2d9b9cc3372552e8@10.129.15.221:30302")
+admin.addPeer("enode://31b19d9c5d1d2327829cb555bcb4c705def773f6e7db846b9603c7cb3dfcfcc83006291644e29da1bfaf53e51036f96c8db053bf529dec1b03339bca619948ad@10.129.15.221:30301")
+admin.addPeer("enode://17f79d70a005ba01f5391c6b8f1dfe44bc10107d458876c1e320df82a6b8acde4d8e0d79b0994bede61e8fcb1d68c62083c6fcf9290b7b81da7570940139b904@10.23.138.132:30303")
+
+
+geth -datadir "D:/test1" -networkid 12345 -port 61916 -rpcport 8545 console
+geth -datadir "D:/test2" -networkid 12345 -port 61917 -ipcdisable console
+
+http://ethereum.stackexchange.com/questions/7033/how-to-connect-to-geth-from-two-local-machines-ethereum
+
+
+var contractaddress = eth.getTransactionReceipt("0x87322b24521c0fd99f33e4d161a29f71142a7205a206dc9578f9144f514a9908");
+contractaddress
